@@ -1,0 +1,8 @@
+//
+// Created by jerem on 06/10/2025.
+//
+
+#ifndef DUST_TRACKER_TRACKERWINDOW_H
+#define DUST_TRACKER_TRACKERWINDOW_H
+
+#endif //DUST_TRACKER_TRACKERWINDOW_H
