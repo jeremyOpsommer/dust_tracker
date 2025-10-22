@@ -1,3 +1,13 @@
-//
-// Created by jerem on 06/10/2025.
-//
+#include <QApplication>
+#include "headers/TrackerWindow.h"
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+
+    // Créer la fenêtre principale du tracker
+    TrackerWindow w;
+    w.show();
+
+    return app.exec();
+}

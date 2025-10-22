@@ -1,8 +1,26 @@
-//
-// Created by jerem on 06/10/2025.
-//
+#pragma once
 
-#ifndef DUST_TRACKER_TRACKERWINDOW_H
-#define DUST_TRACKER_TRACKERWINDOW_H
+#include <QMainWindow>
+#include "PackManager.h"
+#include "LogicEngine.h"
 
-#endif //DUST_TRACKER_TRACKERWINDOW_H
+class TrackerWindow : public QMainWindow
+{
+    Q_OBJECT
+public:
+    TrackerWindow(QWidget *parent = nullptr);
+    ~TrackerWindow();
+
+private slots:
+    void onItemClicked(const QString &itemId);
+    void onLoadPack();
+    void onBroadcastView();
+
+private:
+    PackManager m_packManager;
+    LogicEngine m_logicEngine;
+
+    // UI composants : menu, panneau d’items, panneau de map / locations, etc.
+    void setupUI();
+    void refreshUI();
+};

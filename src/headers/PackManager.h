@@ -1,8 +1,40 @@
-//
-// Created by jerem on 06/10/2025.
-//
+#pragma once
 
-#ifndef DUST_TRACKER_PACKMANAGER_H
-#define DUST_TRACKER_PACKMANAGER_H
+#include <QString>
+#include <QJsonObject>
+#include <QMap>
 
-#endif //DUST_TRACKER_PACKMANAGER_H
+struct Item {
+    QString id;
+    QString displayName;
+    bool acquired = false;
+    // autres propriétés
+};
+
+struct Location {
+    QString id;
+    QString displayName;
+    bool visited = false;
+    // autres propriétés
+};
+
+struct GamePack {
+    QString name;
+    QString description;
+    QMap<QString, Item> items;
+    QMap<QString, Location> locations;
+    QJsonObject layout;  // JSON décrivant positions, tailles, etc.
+    QJsonObject logic;   // JSON décrivant les règles
+};
+
+class PackManager {
+public:
+    bool loadPack(const QString &filePath);
+    bool saveState(const QString &filePath);
+    // accesseurs
+    const GamePack & currentPack() const;
+    GamePack & currentPack();
+
+private:
+    GamePack m_currentPack;
+};
