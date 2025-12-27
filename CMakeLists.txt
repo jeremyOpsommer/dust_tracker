@@ -16,7 +16,9 @@ add_executable(dusttracker
     src/TrackerWindow.cpp
     src/PackManager.cpp
     src/LogicEngine.cpp
+    src/BroadcastWindow.cpp
     src/headers/TrackerWindow.h
+    src/headers/BroadcastWindow.h
 )
 target_include_directories(dusttracker PRIVATE src)
 target_link_libraries(dusttracker Qt6::Widgets)
