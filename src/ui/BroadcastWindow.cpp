@@ -2,7 +2,7 @@
 // Created for Broadcast View
 //
 #include <QtWidgets>
-#include "headers/BroadcastWindow.h"
+#include "BroadcastWindow.h"
 
 BroadcastWindow::BroadcastWindow(PackManager *packManager, QWidget *parent)
     : QWidget(parent), m_packManager(packManager)

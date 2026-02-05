@@ -11,14 +11,15 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
+file(GLOB UI_SOURCES "src/ui/*.cpp" "src/ui/*.h")
+file(GLOB CORE_SOURCES "src/core/*.cpp" "src/core/*.h")
+file(GLOB MANAGER_SOURCES "src/managers/*.cpp" "src/managers/*.h")
+
 add_executable(dusttracker
-    src/main.cpp
-    src/TrackerWindow.cpp
-    src/PackManager.cpp
-    src/LogicEngine.cpp
-    src/BroadcastWindow.cpp
-    src/headers/TrackerWindow.h
-    src/headers/BroadcastWindow.h
+        src/main.cpp
+        ${UI_SOURCES}
+        ${CORE_SOURCES}
+        ${MANAGER_SOURCES}
 )
 target_include_directories(dusttracker PRIVATE src)
 target_link_libraries(dusttracker Qt6::Widgets)

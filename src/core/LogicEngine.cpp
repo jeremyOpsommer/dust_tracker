@@ -1,4 +1,4 @@
-#include "headers/LogicEngine.h"
+#include "LogicEngine.h"
 
 bool LogicEngine::evaluateCondition(const QJsonObject &condition, const GamePack &pack)
 {

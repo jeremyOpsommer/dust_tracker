@@ -1,4 +1,4 @@
-#include "headers/PackManager.h"
+#include "PackManager.h"
 
 bool PackManager::loadPack(const QString &filePath)
 {

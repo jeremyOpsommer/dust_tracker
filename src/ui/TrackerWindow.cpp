@@ -2,8 +2,8 @@
 // Created by jerem on 06/10/2025.
 //
 #include <QtWidgets>
-#include "headers/TrackerWindow.h"
-#include "headers/BroadcastWindow.h"
+#include "TrackerWindow.h"
+#include "BroadcastWindow.h"
 
 TrackerWindow::TrackerWindow(QWidget *parent) : QMainWindow(parent), m_broadcastWindow(nullptr)
 {

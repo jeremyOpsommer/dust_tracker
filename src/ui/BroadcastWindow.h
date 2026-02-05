@@ -3,7 +3,7 @@
 #include <QWidget>
 #include <QGridLayout>
 #include <QLabel>
-#include "PackManager.h"
+#include "../managers/PackManager.h"
 
 class BroadcastWindow : public QWidget
 {

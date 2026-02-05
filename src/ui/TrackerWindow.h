@@ -5,8 +5,8 @@
 #include <QGridLayout>
 #include <QListWidget>
 #include <QWidget>
-#include "PackManager.h"
-#include "LogicEngine.h"
+#include "../managers/PackManager.h"
+#include "../core/LogicEngine.h"
 
 class BroadcastWindow;
 

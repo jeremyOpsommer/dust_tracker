@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "headers/TrackerWindow.h"
+#include "ui/TrackerWindow.h"
 
 int main(int argc, char *argv[])
 {
